@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistem Reminder Imunisasi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <aside class="sidebar">
+        <div>
+            <div class="sidebar-brand">
+                <h2>Sistem Reminder</h2>
+                <p>Notifikasi Jadwal Vaksin Anda</p>
+            </div>
+            
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Layanan</a></li>
+                    <li><a href="#">Vaksin</a></li>
+                    <li><a href="#">Contact Person</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="auth-menu">
+            <ul>
+                <li><a href="#">Login</a></li>
+                <li><a href="#">Register</a></li>
+            </ul>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        
+        <header>
+            <h1>Selamat Datang</h1>
+            <h3>Layanan Vaksin Terpercaya Untuk Anda</h3>
+        </header>
+
+        <div class="box-content floating-layout">
+            <div class="box-image">
+                <img src="https://cms.tzuchihospital.co.id/storage/photos/13/rs%20pik.jpg" alt="Gambar Rumah Sakit">
+            </div>
+            <div class="box-text gradient-overlay">
+                <h2 class="title-white">Vaksinasi Untuk Semua Kalangan</h2>
+                <p class="desc-white">
+                    Kami hadir untuk memberikan kemudahan dalam mengingatkan jadwal 
+                    imunisasi agar kesehatan Anda dan keluarga selalu terjaga dengan 
+                    baik tanpa ada jadwal yang terlewat.
+                </p>
+            </div>
+        </div>
+
+        <h3 class="section-title">Daftar Jenis Vaksinasi</h3>
+        <ul class="animated-list">
+            <li>Vaksinasi untuk Anak</li>
+            <li>Vaksinasi untuk Dewasa</li>
+            <li>Vaksinasi untuk Lansia</li>
+            <li>Vaksinasi Premarital</li>
+        </ul>
+
+        <h3 class="section-title">Jenis Layanan Vaksin</h3>
+        <ul class="animated-list">
+            <li>Layanan Vaksinasi Door to Door</li>
+            <li>Layanan Vaksinasi ke Instansi Kesehatan</li>
+            <li>Konsultasi dengan Dokter</li>
+        </ul>
+
+        <a href="https://imuni.id/" target="_blank" class="btn-action">Lihat untuk selengkapnya</a>
+
+        <div class="notification-box feedback-box">
+            <h3 class="section-title">Daftar untuk mendapatkan notifikasi jadwal vaksin</h3>
+            <form id="formNotifikasi">
+                <div class="form-group">
+                    <label for="namaNotif">Nama Lengkap</label>
+                    <input type="text" id="namaNotif" placeholder="Masukkan nama Anda" required>
+                </div>
+                <div class="form-group">
+                    <label for="emailNotif">Email / Nomor HP</label>
+                    <input type="text" id="emailNotif" placeholder="Masukkan email atau nomor HP untuk notifikasi" required>
+                </div>
+                <button type="submit" class="btn-action" style="margin-bottom: 0;">Daftar</button>
+            </form>
+        </div>
+
+        <div class="feedback-box">
+            <h3 class="section-title">Feedback & Laporan</h3>
+            <form id="formLaporan">
+                <div class="form-group">
+                    <label for="namaLengkap">Nama Lengkap</label>
+                    <input type="text" id="namaLengkap" placeholder="Masukkan nama Anda" required>
+                </div>
+                <div class="form-group">
+                    <label for="pesanLaporan">Laporan / Keluhan</label>
+                    <textarea id="pesanLaporan" rows="4" placeholder="Tuliskan pengalaman atau laporan terkait pelayanan vaksin..." required></textarea>
+                </div>
+                <button type="submit" class="btn-action" style="margin-bottom: 0;">Kirim Laporan</button>
+            </form>
+        </div>
+
+    </main>
+
+    <script src="main.js"></script>
+</body>
+</html>

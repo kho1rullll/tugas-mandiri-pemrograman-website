@@ -1,0 +1,260 @@
+/* === RESET & VARIABEL WARNA === */
+:root {
+    --primary-blue: #003366;
+    --sky-blue: #00a2ff;
+    --light-bg: #f4f7f6;
+    --white: #ffffff;
+    --text-dark: #333333;
+    --text-gray: #666666;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    background-color: var(--light-bg);
+    color: var(--text-dark);
+}
+
+/* === SIDEBAR KIRI === */
+.sidebar {
+    width: 260px;
+    background-color: var(--primary-blue);
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: fixed;
+    height: 100vh;
+    padding-top: 30px;
+    box-shadow: 4px 0 10px rgba(0,0,0,0.1);
+}
+
+.sidebar-brand {
+    padding: 0 20px;
+    margin-bottom: 40px;
+}
+
+.sidebar-brand h2 {
+    font-size: 1.2rem;
+    color: var(--sky-blue);
+    margin-bottom: 5px;
+}
+
+.sidebar-brand p {
+    font-size: 0.8rem;
+    color: #ccc;
+}
+
+.nav-menu {
+    flex-grow: 1;
+}
+
+.nav-menu ul, .auth-menu ul {
+    list-style: none;
+}
+
+.nav-menu li a, .auth-menu li a {
+    display: block;
+    padding: 15px 25px;
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+    transition: all 0.4s ease;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.nav-menu li a::before, .auth-menu li a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, var(--sky-blue), transparent);
+    transition: all 0.4s ease;
+    z-index: -1;
+    opacity: 0.5;
+}
+
+.nav-menu li a:hover::before, .auth-menu li a:hover::before {
+    left: 100%;
+}
+
+.nav-menu li a:hover, .auth-menu li a:hover {
+    color: var(--white);
+    background-color: rgba(0, 162, 255, 0.2);
+    padding-left: 35px;
+    border-left: 4px solid var(--sky-blue);
+}
+
+.auth-menu {
+    padding-bottom: 20px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+/* === KONTEN UTAMA (KANAN) === */
+.main-content {
+    margin-left: 260px;
+    padding: 40px 60px;
+    width: calc(100% - 260px);
+}
+
+/* Header */
+header {
+    text-align: left;
+    margin-bottom: 40px;
+}
+
+header h1 {
+    font-size: 4rem;
+    color: var(--primary-blue);
+    margin-bottom: 10px;
+}
+
+header h3 {
+    font-size: 2rem;
+    color: var(--sky-blue);
+    font-weight: 400;
+}
+
+/* Box Content Gambar Full */
+.box-content.floating-layout {
+    display: block;
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    margin-bottom: 40px;
+}
+
+.box-content.floating-layout .box-image {
+    position: relative;
+}
+
+.box-content.floating-layout .box-image img {
+    width: 100%;
+    height: 100%; /* Disesuaikan agar proporsional */
+    object-fit: cover;
+    display: block;
+}
+
+.box-content.floating-layout .box-text.gradient-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px;
+    background: linear-gradient(to top, rgba(0, 51, 102, 0.9) 0%, rgba(0, 51, 102, 0.5) 60%, rgba(255, 255, 255, 0) 100%);
+}
+
+/* Teks Putih pada Gambar */
+.title-white {
+    font-size: 2.2rem;
+    color: var(--white);
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.5); /* Tambahan shadow agar makin jelas */
+}
+
+.desc-white {
+    color: var(--white);
+    line-height: 1.6;
+    font-size: 1.1rem;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+/* List Animasi General */
+.section-title {
+    color: var(--primary-blue);
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+.animated-list {
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.animated-list li {
+    background: var(--white);
+    margin-bottom: 10px;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+    border-left: 4px solid var(--white);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.animated-list li:hover {
+    transform: translateX(15px);
+    border-left: 4px solid var(--sky-blue);
+    color: var(--primary-blue);
+    box-shadow: 0 5px 15px rgba(0, 162, 255, 0.1);
+}
+
+/* Button */
+.btn-action {
+    display: inline-block;
+    background: linear-gradient(to right, var(--primary-blue), var(--sky-blue));
+    color: var(--white);
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-action:hover {
+    opacity: 0.9;
+    transform: scale(1.05);
+}
+
+/* Formulir (Feedback & Notifikasi) */
+.feedback-box {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border-top: 5px solid var(--sky-blue);
+}
+
+/* Jarak (Margin) Antara Form Notifikasi dan Feedback */
+.notification-box {
+    margin-bottom: 40px; 
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--primary-blue);
+    font-weight: 500;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    outline: none;
+    border-color: var(--sky-blue);
+}
